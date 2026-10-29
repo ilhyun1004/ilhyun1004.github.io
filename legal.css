@@ -1,0 +1,22 @@
+@font-face { font-family: 'Manrope'; font-weight: 400; font-display: swap; src: url('fonts/manrope-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-weight: 700; font-display: swap; src: url('fonts/manrope-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-weight: 800; font-display: swap; src: url('fonts/manrope-latin-800-normal.woff2') format('woff2'); }
+:root { --paper:#f2f5f8; --ink:#14263a; --ink-2:#3d5068; --ink-3:#6b7d93; --line:#c3cfdc; --teal:#0b7a75; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Manrope",-apple-system,"Segoe UI",sans-serif; font-size:17px; line-height:1.6; }
+a { color:var(--teal); }
+.nav { border-bottom:1px solid var(--line); background:#fff; }
+.nav .wrap { display:flex; align-items:center; gap:24px; height:60px; }
+.brand { font-weight:800; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:10px; }
+.brand .dot { width:10px; height:10px; border-radius:50%; background:var(--teal); box-shadow:0 0 0 4px #d6ecea; }
+.wrap { max-width:760px; margin:0 auto; padding:0 24px; }
+main { padding:48px 0 80px; }
+h1 { font-size:36px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+h2 { font-size:21px; font-weight:700; margin:36px 0 10px; }
+p, li { color:var(--ink-2); }
+p { margin:0 0 12px; }
+.meta { color:var(--ink-3); font-size:14px; margin-bottom:28px; }
+address { font-style:normal; background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:12px 0 20px; }
+.todo { background:#f3e3d4; border-left:4px solid #b5672a; padding:10px 14px; border-radius:6px; font-size:14px; color:#6b3a12; margin:16px 0; }
+footer { border-top:1px solid var(--line); padding:20px 0; font-size:14px; color:var(--ink-3); }
+footer a { margin-right:16px; }
