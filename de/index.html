@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ilhyun Lee — Cloud- & Security-Experte</title>
+<meta name="description" content="Über 20 Jahre Betrieb von Unternehmensinfrastruktur, heute Absicherung in der Cloud. CISSP, ISO/IEC 27001 Lead Implementer, AWS Solutions Architect. Rhein-Main, Blaue Karte EU, sofort verfügbar.">
+<meta property="og:title" content="Ilhyun Lee — Cloud- & Security-Experte">
+<meta property="og:description" content="Über 20 Jahre Infrastruktur, heute in der Cloud abgesichert. CISSP · ISO 27001 LI · AWS SA. Raum Frankfurt, sofort verfügbar.">
+<meta property="og:type" content="profile">
+<link rel="alternate" hreflang="en" href="https://ilhyun1004.github.io/">
+<link rel="alternate" hreflang="de" href="https://ilhyun1004.github.io/de/">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ilhyun Lee","jobTitle":"Cloud- & Security-Experte","address":{"@type":"PostalAddress","addressLocality":"Bad Soden am Taunus","addressCountry":"DE"},"email":"mailto:ilhyun1004@gmail.com","url":"https://www.linkedin.com/in/ilhyun-lee-860aa9a2","alumniOf":["University of Ulsan","Pusan National University"],"knowsAbout":["AWS","Cloud security","ISO/IEC 27001","CISSP","VMware","Hyper-V","Linux","Active Directory","IT management"]}
+</script>
+<style>
+  @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/manrope-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url('../fonts/manrope-latin-500-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url('../fonts/manrope-latin-600-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url('../fonts/manrope-latin-700-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 800; font-display: swap; src: url('../fonts/manrope-latin-800-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('../fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2'); }
+  :root {
+    --paper: #f2f5f8;
+    --paper-2: #e6ebf1;
+    --ink: #14263a;
+    --ink-2: #3d5068;
+    --ink-3: #6b7d93;
+    --line: #c3cfdc;
+    --teal: #0b7a75;
+    --teal-soft: #d6ecea;
+    --copper: #b5672a;
+    --copper-soft: #f3e3d4;
+    --white: #ffffff;
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: "Manrope", -apple-system, "Segoe UI", sans-serif;
+    --max: 1080px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal, .trace path { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 3px solid var(--copper); outline-offset: 3px; border-radius: 4px; }
+  h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(26px, 3.2vw, 34px); font-weight: 700; }
+  h3 { font-size: 19px; font-weight: 700; }
+  p { margin: 0; }
+  .mono { font-family: var(--mono); font-size: 13px; letter-spacing: 0; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- nav ---------- */
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(242,245,248,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; gap: 24px; height: 60px; }
+  .brand { font-weight: 800; font-size: 17px; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+  .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 4px var(--teal-soft); }
+  .nav-links { display: flex; gap: 22px; margin-left: 12px; font-size: 15px; font-weight: 600; }
+  .nav-links a { color: var(--ink-2); }
+  .nav-links a.active { color: var(--teal); }
+  .nav .spacer { flex: 1; }
+  .lang { display: flex; gap: 6px; font-size: 13.5px; font-weight: 700; font-family: var(--mono); margin-right: 6px; }
+  .lang a { color: var(--ink-3); } .lang a[aria-current] { color: var(--teal); } .lang span { color: var(--line); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 15px; border: 1.5px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; }
+  .btn:hover { text-decoration: none; background: var(--white); }
+  .btn.primary { background: var(--ink); color: var(--white); }
+  .btn.primary:hover { background: #1f3a55; }
+  .btn.small { padding: 7px 14px; font-size: 14px; }
+  @media (max-width: 760px) { .nav-links { display: none; } }
+
+  /* ---------- page trace (left cable) ---------- */
+  .trace { position: fixed; left: max(12px, calc((100vw - var(--max)) / 2 - 44px)); top: 0; height: 100vh; width: 28px; pointer-events: none; z-index: 5; }
+  .trace .rail { position: absolute; left: 13px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+  .trace .fill { position: absolute; left: 13px; top: 0; width: 2px; background: var(--teal); height: 0; transition: height .15s linear; }
+  .trace .node { position: absolute; left: 7px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); border: 2px solid var(--line); transition: all .3s; }
+  .trace .node.on { border-color: var(--teal); background: var(--teal); box-shadow: 0 0 0 5px var(--teal-soft); }
+  .trace .node span { position: absolute; left: 22px; top: -3px; white-space: nowrap; font-family: var(--mono); font-size: 11px; color: var(--ink-3); opacity: 0; transition: opacity .3s; }
+  .trace .node.on span { opacity: 1; }
+  @media (max-width: 1240px) { .trace { display: none; } }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 64px 0 40px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(38px, 5vw, 58px); font-weight: 800; letter-spacing: -0.025em; }
+  .hero .role { font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; color: var(--ink-2); margin-top: 8px; }
+  .hero .lead { font-size: 19px; margin-top: 22px; max-width: 34em; color: var(--ink-2); }
+  .hero .lead strong { color: var(--ink); }
+  .creds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .cred { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; background: var(--white); border: 1px solid var(--line); font-weight: 700; font-size: 14px; color: var(--ink); }
+  .cred svg { width: 14px; height: 14px; }
+  .cred.new { border-color: var(--teal); color: var(--teal); }
+  .ctas { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 22px; font-size: 14px; color: var(--ink-2); }
+  .facts span::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); margin-right: 8px; vertical-align: 2px; }
+  .hero-map { width: 100%; height: auto; }
+  @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } .hero { padding-top: 40px; } }
+
+  /* ---------- stats band ---------- */
+  .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { padding: 22px 24px 22px 0; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: none; }
+  .stat + .stat { padding-left: 24px; }
+  .stat b { display: block; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+  .stat small { display: block; margin-top: 6px; color: var(--ink-3); font-size: 14px; }
+  @media (max-width: 760px) { .stats .wrap { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: none; } .stat:nth-child(3) { padding-left: 0; } }
+
+  /* ---------- sections ---------- */
+  section.block { padding: 84px 0 0; }
+  .sec-head { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 36px; max-width: 46em; }
+  .sec-head p { color: var(--ink-2); font-size: 18px; }
+  .sec-head .mono { color: var(--teal); }
+  .connector { display: block; width: 100%; height: 56px; margin: 28px 0 -28px; }
+  @media (max-width: 760px) { section.block { padding-top: 60px; } }
+
+  /* pillars */
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pillar { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 24px; position: relative; overflow: hidden; }
+  .pillar::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--teal); }
+  .pillar:nth-child(2)::before { background: var(--ink); }
+  .pillar:nth-child(3)::before { background: var(--copper); }
+  .pillar .ico { width: 40px; height: 40px; margin-bottom: 14px; }
+  .pillar p { color: var(--ink-2); font-size: 15.5px; margin-top: 8px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .tags span { font-family: var(--mono); font-size: 12px; padding: 4px 8px; border-radius: 5px; background: var(--paper); border: 1px solid var(--line); color: var(--ink-2); }
+  @media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } }
+
+  /* timeline */
+  .timeline { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 20px 20px 8px; overflow-x: auto; }
+  .timeline svg { width: 100%; min-width: 720px; height: auto; display: block; }
+  .roles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
+  .role-card { border-left: 3px solid var(--line); padding: 4px 0 4px 20px; }
+  .role-card.now { border-left-color: var(--teal); }
+  .role-card .when { font-family: var(--mono); font-size: 12.5px; color: var(--ink-3); }
+  .role-card h3 { margin-top: 4px; }
+  .role-card .org { color: var(--ink-2); font-weight: 600; font-size: 15px; margin-top: 2px; }
+  .role-card ul { margin: 12px 0 0; padding-left: 18px; color: var(--ink-2); font-size: 15.5px; }
+  .role-card li { margin-bottom: 5px; }
+  .role-card li b { color: var(--ink); font-weight: 700; }
+  .earlier { margin-top: 18px; color: var(--ink-3); font-size: 15px; }
+  @media (max-width: 860px) { .roles { grid-template-columns: 1fr; } }
+
+  /* skills stack */
+  .stack { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .stack svg { width: 100%; height: auto; display: block; }
+
+  /* certs */
+  .certs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .cert { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+  .cert.key { border-color: var(--teal); background: linear-gradient(180deg, var(--white), var(--teal-soft)); }
+  .cert .seal { width: 44px; height: 44px; }
+  .cert b { display: block; font-size: 16px; line-height: 1.25; }
+  .cert small { display: block; color: var(--ink-3); font-size: 13px; margin-top: 4px; }
+  .cert a { font-size: 13px; font-weight: 600; margin-top: 8px; display: inline-block; }
+  .edu { margin-top: 22px; display: flex; gap: 32px; flex-wrap: wrap; color: var(--ink-2); font-size: 15.5px; }
+  .edu b { color: var(--ink); }
+  @media (max-width: 900px) { .certs { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .certs { grid-template-columns: 1fr; } }
+
+  /* projects */
+  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .project { background: var(--white); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+  .project .fig { background: var(--paper); border-bottom: 1px solid var(--line); padding: 16px; }
+  .project .fig svg { width: 100%; height: auto; display: block; }
+  .project .body { padding: 20px 24px 24px; }
+  .project .status { font-family: var(--mono); font-size: 12px; color: var(--teal); }
+  .project .status.plan { color: var(--copper); }
+  .project h3 { margin-top: 6px; }
+  .project p { color: var(--ink-2); font-size: 15.5px; margin-top: 8px; }
+  .project .links { margin-top: 14px; display: flex; gap: 14px; font-weight: 700; font-size: 14px; }
+  @media (max-width: 860px) { .projects { grid-template-columns: 1fr; } }
+
+  /* contact */
+  .contact { margin-top: 84px; background: var(--ink); color: var(--white); padding: 64px 0 40px; }
+  .contact h2 { color: var(--white); }
+  .contact .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+  .contact p { color: #b9c6d4; font-size: 18px; margin-top: 12px; max-width: 32em; }
+  .contact .ctas .btn { border-color: var(--white); color: var(--white); }
+  .contact .ctas .btn.primary { background: var(--teal); border-color: var(--teal); }
+  .contact .ctas .btn:hover { background: rgba(255,255,255,.08); }
+  .contact .ctas .btn.primary:hover { background: #0d8f89; }
+  .chan { list-style: none; margin: 0; padding: 0; }
+  .chan li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.14); font-size: 15.5px; }
+  .chan li span:first-child { color: #8fa3b8; font-family: var(--mono); font-size: 12.5px; padding-top: 3px; }
+  .chan a { color: var(--white); }
+  .foot { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 13.5px; color: #8fa3b8; }
+  .foot a { color: #b9c6d4; }
+  @media (max-width: 860px) { .contact .wrap { grid-template-columns: 1fr; } }
+
+  /* reveal: one orchestrated entrance per section */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  /* draw-in for svg paths */
+  .draw path.d, .draw line.d, .draw polyline.d { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: stroke-dashoffset 1.6s ease .2s; }
+  .draw.in path.d, .draw.in line.d, .draw.in polyline.d { stroke-dashoffset: 0; }
+</style>
+</head>
+<body>
+
+<!-- left page trace -->
+<div class="trace" aria-hidden="true">
+  <div class="rail"></div><div class="fill" id="traceFill"></div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dot"></span>Ilhyun Lee</a>
+    <nav class="nav-links" aria-label="Abschnitte">
+      <a href="#skills">Kompetenzen</a><a href="#experience">Werdegang</a><a href="#credentials">Zertifikate</a><a href="#projects">Projekte</a><a href="#contact">Kontakt</a>
+    </nav>
+    <span class="spacer"></span>
+    <nav class="lang" aria-label="Sprache"><a href="../" lang="en">EN</a><span>|</span><a href="./" aria-current="page">DE</a></nav>
+    <a class="btn small primary" href="../Ilhyun-Lee-CV-DE.pdf" download>Lebenslauf</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Ilhyun Lee</h1>
+      <p class="role">Cloud- &amp; Security-Experte, Rhein-Main</p>
+      <p class="lead">25 Jahre Infrastrukturbetrieb, vom ersten Datei- und Mailserver bis zur Hybrid-Cloud mit 200 Servern. <strong>Heute sichere ich sie in der Cloud ab</strong>, mit den passenden Zertifizierungen und der Betriebserfahrung, die weiß, was wirklich ausfällt.</p>
+      <div class="creds">
+        <span class="cred new"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>CISSP</span>
+        <span class="cred new"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>ISO/IEC 27001 Lead Implementer</span>
+        <span class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17a4 4 0 010-8 6 6 0 0111.6 1.5A3.5 3.5 0 0118 17z"/></svg>AWS Solutions Architect</span>
+        <span class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg>RHCSA</span>
+      </div>
+      <div class="ctas">
+        <a class="btn primary" href="../Ilhyun-Lee-CV-DE.pdf" download>Lebenslauf (PDF)</a>
+        <a class="btn" href="mailto:ilhyun1004@gmail.com">E-Mail schreiben</a>
+      </div>
+      <div class="facts">
+        <span>Blaue Karte EU</span><span>Sofort verfügbar</span><span>Bad Soden am Taunus bei Frankfurt</span><span>Englisch fließend, Deutsch A1 (im Kurs)</span>
+      </div>
+    </div>
+
+    <!-- hero map: career as a migration path -->
+    <svg class="hero-map draw" viewBox="0 0 520 420" role="img" aria-label="Werdegang als Migrationspfad: physische Racks, Virtualisierung, Hybrid- und Cloud-Plattform, heute Cloud-Sicherheit" font-family="Manrope, sans-serif">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b7a75"/></marker>
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#dbe3ec" stroke-width="1"/></pattern>
+      </defs>
+      <rect width="520" height="420" rx="16" fill="#fff" stroke="#c3cfdc"/>
+      <rect x="1" y="1" width="518" height="418" rx="16" fill="url(#grid)" opacity=".7"/>
+
+      <!-- route -->
+      <g fill="none" stroke="#0b7a75" stroke-width="3" marker-end="url(#ar)">
+        <path class="d" d="M86 300 C 86 252, 110 250, 148 250"/>
+        <path class="d" d="M200 220 C 200 160, 210 140, 248 140"/>
+        <path class="d" d="M302 110 C 302 78, 340 80, 390 80"/>
+      </g>
+
+      <!-- node 1: physical -->
+      <g>
+        <rect x="40" y="300" width="92" height="64" rx="8" fill="#f2f5f8" stroke="#14263a" stroke-width="1.5"/>
+        <g stroke="#14263a" stroke-width="1.5" fill="none">
+          <rect x="54" y="312" width="64" height="9" rx="2"/><rect x="54" y="326" width="64" height="9" rx="2"/><rect x="54" y="340" width="64" height="9" rx="2"/>
+        </g>
+        <g fill="#0b7a75"><circle cx="112" cy="316.5" r="2"/><circle cx="112" cy="330.5" r="2"/><circle cx="112" cy="344.5" r="2"/></g>
+        <text x="86" y="384" text-anchor="middle" font-size="12.5" font-weight="700" fill="#14263a">Physische Racks</text>
+        <text x="86" y="400" text-anchor="middle" font-size="11" fill="#6b7d93" font-family="JetBrains Mono, monospace">2001–2010</text>
+      </g>
+
+      <!-- node 2: virtualization + DC ops -->
+      <g>
+        <rect x="150" y="220" width="100" height="60" rx="8" fill="#f2f5f8" stroke="#14263a" stroke-width="1.5"/>
+        <g fill="none" stroke="#14263a" stroke-width="1.5">
+          <rect x="164" y="232" width="24" height="18" rx="3"/><rect x="194" y="232" width="24" height="18" rx="3"/><rect x="164" y="254" width="24" height="18" rx="3"/><rect x="194" y="254" width="24" height="18" rx="3"/>
+        </g>
+        <rect x="224" y="232" width="12" height="40" rx="2" fill="#14263a"/>
+        <text x="200" y="300" text-anchor="middle" font-size="12.5" font-weight="700" fill="#14263a">Virtualisierung, AD, 1.500 Nutzer</text>
+        <text x="200" y="316" text-anchor="middle" font-size="11" fill="#6b7d93" font-family="JetBrains Mono, monospace">2010–2023</text>
+      </g>
+
+      <!-- node 3: hybrid / cloud platform -->
+      <g>
+        <rect x="250" y="110" width="104" height="60" rx="8" fill="#f2f5f8" stroke="#14263a" stroke-width="1.5"/>
+        <path d="M276 152a9 9 0 010-18 13 13 0 0125 3 8 8 0 01-1 15z" fill="#d6ecea" stroke="#0b7a75" stroke-width="1.5"/>
+        <g fill="none" stroke="#14263a" stroke-width="1.5"><rect x="312" y="126" width="28" height="8" rx="2"/><rect x="312" y="140" width="28" height="8" rx="2"/></g>
+        <path d="M302 143h10" stroke="#0b7a75" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <text x="302" y="190" text-anchor="middle" font-size="12.5" font-weight="700" fill="#14263a">200 Server in die Cloud</text>
+        <text x="302" y="206" text-anchor="middle" font-size="11" fill="#6b7d93" font-family="JetBrains Mono, monospace">2023–2026</text>
+      </g>
+
+      <!-- node 4: cloud security (now) -->
+      <g>
+        <rect x="392" y="40" width="104" height="80" rx="10" fill="#d6ecea" stroke="#0b7a75" stroke-width="2.5"/>
+        <path d="M444 54l17 7v12c0 12-8 20-17 24-9-4-17-12-17-24V61z" fill="#fff" stroke="#0b7a75" stroke-width="2"/>
+        <path d="M436 76l6 6 11-12" fill="none" stroke="#0b7a75" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="444" y="140" text-anchor="middle" font-size="13" font-weight="800" fill="#0b7a75">Cloud-Sicherheit</text>
+        <text x="444" y="156" text-anchor="middle" font-size="11" fill="#6b7d93" font-family="JetBrains Mono, monospace">heute</text>
+      </g>
+
+      <!-- legend chips along the route -->
+      <g font-size="11" font-family="JetBrains Mono, monospace" fill="#3d5068">
+        <text x="34" y="262">migrieren</text>
+        <text x="100" y="178">heben &amp; sichern</text>
+        <text x="322" y="72">härten</text>
+      </g>
+      <text x="24" y="30" font-size="12" font-weight="700" fill="#3d5068">Migrationspfad eines Berufswegs</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b data-count="25">25</b><small>Jahre IT-Infrastruktur</small></div>
+    <div class="stat"><b data-count="200">200</b><small>Server betrieben und migriert</small></div>
+    <div class="stat"><b data-count="1500">1.500</b><small>Nutzer in der Spitze betreut</small></div>
+    <div class="stat"><b>$1M</b><small>IT-Jahresbudget verantwortet</small></div>
+  </div>
+</div>
+
+<!-- ================= SKILLS ================= -->
+<section class="block reveal" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">node 01 / was ich mitbringe</span>
+      <h2>Drei Dinge, die Recruiter sonst bei drei verschiedenen Personen finden</h2>
+      <p>Praktische Cloud-Infrastruktur, Zertifizierungen in Security-Governance und die Erfahrung, ein Team und ein Budget zu führen. Alle drei habe ich.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="#0b7a75" stroke-width="2.2"><path d="M12 29a6 6 0 010-12 9 9 0 0117.4 2.2A5 5 0 0129 29z"/><path d="M16 23h8M20 19v8" stroke-linecap="round"/></svg>
+        <h3>Cloud- und Hybrid-Infrastruktur</h3>
+        <p>Über 200 Windows- und Linux-Server auf Hyper-V, VMware und der Samsung Cloud Platform (IaaS nach AWS-Prinzip mit Compute, VPC, Block-/Objektspeicher, Snapshots und IAM) geplant, migriert und betrieben. Praxis mit AWS und CloudFormation.</p>
+        <div class="tags"><span>AWS</span><span>VPC</span><span>IAM</span><span>CloudFormation</span><span>Terraform</span><span>VMware</span><span>Hyper-V</span><span>VxRail</span><span>Veeam</span><span>Linux</span><span>Windows Server</span></div>
+      </article>
+      <article class="pillar">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="#14263a" stroke-width="2.2"><path d="M20 5l12 5v9c0 8-6 14-12 16-6-2-12-8-12-16v-9z"/><path d="M15 20l4 4 7-8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Security-Governance und -Betrieb</h3>
+        <p>CISSP und ISO/IEC 27001 Lead Implementer. Active Directory, DNS/DHCP, Endpoint-Härtung und Malware-Erstreaktion für die koreanischen Standorte eines globalen Industriekonzerns; Arbeit in OT/IT-Umgebungen auf drei großen Werften.</p>
+        <div class="tags"><span>ISO/IEC 27001</span><span>NIST CSF</span><span>IEC 62443</span><span>Active Directory</span><span>Entra ID</span><span>Zabbix</span><span>Grafana</span><span>Incident Response</span><span>Backup &amp; DR</span></div>
+      </article>
+      <article class="pillar">
+        <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="#b5672a" stroke-width="2.2"><circle cx="14" cy="14" r="5"/><circle cx="27" cy="16" r="4"/><path d="M5 32c0-6 4-9 9-9s9 3 9 9M22 31c1-4 3-6 6-6s6 2 6 6"/></svg>
+        <h3>Führung im großen Maßstab</h3>
+        <p>Leitung eines siebenköpfigen IT-Teams bei National Oilwell Varco Korea: 1.500 Nutzer, rund 1 Mio. USD Jahresbudget, Angebote und Lieferantenverträge, ein Rechenzentrumsumzug und eine ITSM-Einführung. MBA, Pusan National University.</p>
+        <div class="tags"><span>Teamleitung</span><span>Budgetierung</span><span>Lieferantenmanagement</span><span>ITIL</span><span>ITSM</span><span>Rechenzentrumsumzug</span><span>OT/IT</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="block reveal" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">node 02 / wo es entstanden ist</span>
+      <h2>29 Jahre, maßstabsgetreu</h2>
+      <p>Jeder Balken ist eine Position, die Farbe der Schwerpunkt der Arbeit. Der Schritt in die Cloud-Sicherheit ist das logische Ende dieser Linie, kein Berufswechsel.</p>
+    </div>
+    <div class="timeline draw">
+      <svg viewBox="-40 0 1000 300" role="img" aria-label="Zeitstrahl 1997 bis 2026: IT-Administrator bei K2 Sports, IT-Leitung bei Sea Life Busan, Corporate IT Manager bei NOV, Senior IT Consultant bei DIVA Korea, Senior System Administrator bei Samsung SDS Deutschland, 2026 CISSP und ISO 27001 Lead Implementer" font-family="Manrope, sans-serif">
+        <!-- scale: 1997..2027 → x 110..930 ; 1 year = 27.33px -->
+        <g font-family="JetBrains Mono, monospace" font-size="11.5" fill="#6b7d93">
+          <g stroke="#dbe3ec"><line x1="110" x2="110" y1="24" y2="236"/><line x1="192" x2="192" y1="24" y2="236"/><line x1="274" x2="274" y1="24" y2="236"/><line x1="356" x2="356" y1="24" y2="236"/><line x1="438" x2="438" y1="24" y2="236"/><line x1="520" x2="520" y1="24" y2="236"/><line x1="602" x2="602" y1="24" y2="236"/><line x1="684" x2="684" y1="24" y2="236"/><line x1="766" x2="766" y1="24" y2="236"/><line x1="848" x2="848" y1="24" y2="236"/><line x1="930" x2="930" y1="24" y2="236"/></g>
+          <text x="110" y="16" text-anchor="middle">1997</text><text x="192" y="16" text-anchor="middle">2000</text><text x="274" y="16" text-anchor="middle">2003</text><text x="356" y="16" text-anchor="middle">2006</text><text x="438" y="16" text-anchor="middle">2009</text><text x="520" y="16" text-anchor="middle">2012</text><text x="602" y="16" text-anchor="middle">2015</text><text x="684" y="16" text-anchor="middle">2018</text><text x="766" y="16" text-anchor="middle">2021</text><text x="848" y="16" text-anchor="middle">2024</text><text x="930" y="16" text-anchor="middle">2027</text>
+        </g>
+        <!-- rows -->
+        <g font-size="12.5" fill="#14263a">
+          <text x="100" y="52" text-anchor="end" font-weight="600">K2 Sports</text>
+          <rect x="110" y="40" width="110" height="18" rx="4" fill="#3d5068"/>
+          <text x="226" y="53" font-size="11.5" fill="#6b7d93">IT-Administrator: Netzwerk, Datei- und Mailserver</text>
+
+          <text x="100" y="92" text-anchor="end" font-weight="600">Sea Life Busan</text>
+          <rect x="220" y="80" width="246" height="18" rx="4" fill="#3d5068"/>
+          <text x="472" y="93" font-size="11.5" fill="#6b7d93">IT-Leiter, Merlin Entertainments</text>
+
+          <text x="100" y="132" text-anchor="end" font-weight="600">NOV</text>
+          <rect x="466" y="120" width="246" height="18" rx="4" fill="#14263a"/>
+          <text x="718" y="133" font-size="11.5" fill="#6b7d93">Corporate IT Manager, 7 Mitarbeitende</text>
+
+          <text x="100" y="172" text-anchor="end" font-weight="600">DIVA Korea</text>
+          <rect x="712" y="160" width="109" height="18" rx="4" fill="#3d5068"/>
+          <text x="827" y="173" font-size="11.5" fill="#6b7d93">Senior IT Consultant</text>
+
+          <text x="100" y="212" text-anchor="end" font-weight="600">Samsung SDS DE</text>
+          <rect x="821" y="200" width="87" height="18" rx="4" fill="#0b7a75"/>
+          <text x="914" y="213" font-size="11.5" fill="#6b7d93">Hosting</text>
+        </g>
+        <!-- 2026 milestone -->
+        <line class="d" x1="903" x2="903" y1="24" y2="250" stroke="#0b7a75" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <path d="M903 232l8 8-8 8-8-8z" fill="#0b7a75"/>
+        <text x="895" y="268" text-anchor="end" font-size="12" font-weight="700" fill="#0b7a75">2026: CISSP + ISO 27001 LI</text>
+        <!-- legend -->
+        <g font-size="11.5" fill="#6b7d93" transform="translate(110 290)">
+          <rect width="12" height="10" rx="2" fill="#3d5068"/><text x="18" y="9">IT-Betrieb</text>
+          <rect x="110" width="12" height="10" rx="2" fill="#14263a"/><text x="128" y="9">IT-Führung</text>
+          <rect x="210" width="12" height="10" rx="2" fill="#0b7a75"/><text x="228" y="9">Cloud-Hosting</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="roles">
+      <article class="role-card now">
+        <span class="when">2023 – Feb. 2026 · Eschborn</span>
+        <h3>Senior System Administrator, Local Hosting Manager</h3>
+        <p class="org">Samsung SDS Germany GmbH</p>
+        <ul>
+          <li>Betrieb von <b>rund 200 Servern</b> (50 Windows, 150 Linux) auf Hyper-V und VMware mit Dell EMC VxRail und Veeam-Backup.</li>
+          <li>Migration der Landschaft auf die <b>Samsung Cloud Platform</b> und Betrieb dort: Compute, Block- und Objektspeicher, VPC, Snapshots, IAM.</li>
+          <li>Monitoring mit <b>Zabbix und Grafana</b> aufgebaut; MySQL und PostgreSQL im Produktivbetrieb administriert.</li>
+          <li>Befristeter Vertrag, mit Projektabschluss beendet.</li>
+        </ul>
+      </article>
+      <article class="role-card">
+        <span class="when">2010 – 2019 · Busan, Korea</span>
+        <h3>Corporate IT Manager</h3>
+        <p class="org">National Oilwell Varco (NOV)</p>
+        <ul>
+          <li>Führung von <b>7 IT-Mitarbeitenden</b> für bis zu <b>1.500 Nutzer</b> in Büros, einem Werk und auf drei Werften.</li>
+          <li>Verantwortung für <b>rund 1 Mio. USD Jahresbudget</b>, Angebote und Lieferantenverträge.</li>
+          <li>Betrieb von rund 50 Windows-Servern im Verbund mit der US-Zentrale; Azure AD Connect mit dem globalen Team; Commvault-Backup.</li>
+          <li><b>Rechenzentrumsumzug</b> (Verkabelung, Strom, USV), Büroumzüge und eine ITSM-Einführung umgesetzt.</li>
+        </ul>
+      </article>
+      <article class="role-card">
+        <span class="when">2019 – 2023 · Busan, Korea</span>
+        <h3>Senior IT Consultant</h3>
+        <p class="org">DIVA Korea</p>
+        <ul>
+          <li>Infrastruktur- und Sicherheitsberatung für Unternehmenskunden.</li>
+        </ul>
+      </article>
+      <article class="role-card">
+        <span class="when">2001 – 2010 · Busan, Korea</span>
+        <h3>IT-Leiter</h3>
+        <p class="org">Sea Life Busan Aquarium, Merlin Entertainments</p>
+        <ul>
+          <li>Gesamte IT eines Besucherbetriebs: Netzwerke, Server, Ticketing- und Kassensysteme.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="earlier">Der Anfang: IT-Administrator bei K2 Sports, Busan (1997–2001), zuständig für Netzwerk, Dateiserver und Mailserver des Unternehmens, die erste Infrastruktur in meiner Verantwortung.</p>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section class="block reveal" id="stack">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">node 03 / der Stack, Schicht für Schicht</span>
+      <h2>Wo ich im Stack gearbeitet habe</h2>
+      <p>Gefüllt heißt Produktionserfahrung. Umrandet heißt geschult und zertifiziert, mit Labor, noch nicht für einen Kunden betrieben.</p>
+    </div>
+    <div class="stack">
+      <svg viewBox="0 0 960 330" role="img" aria-label="Technologie-Stack nach Schichten: Governance, Identität und Sicherheit, Cloud-Plattformen, Virtualisierung und Backup, Betriebssysteme und Datenbanken, Netzwerk und Monitoring; überwiegend Produktionserfahrung, Azure und Terraform geschult" font-family="Manrope, sans-serif" font-size="12.5">
+        <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#9fb0c2" stroke-width="1.2"/></pattern></defs>
+        <g fill="#6b7d93" font-family="JetBrains Mono, monospace" font-size="11.5">
+          <text x="24" y="42">governance</text><text x="24" y="92">identität &amp; security</text><text x="24" y="142">cloud</text><text x="24" y="192">virtualisierung</text><text x="24" y="242">os &amp; daten</text><text x="24" y="292">netzwerk &amp; betrieb</text>
+        </g>
+        <g stroke="#dbe3ec"><line x1="180" x2="936" y1="62" y2="62"/><line x1="180" x2="936" y1="112" y2="112"/><line x1="180" x2="936" y1="162" y2="162"/><line x1="180" x2="936" y1="212" y2="212"/><line x1="180" x2="936" y1="262" y2="262"/></g>
+
+        <!-- governance -->
+        <g fill="#14263a" font-weight="600">
+          <rect x="180" y="24" width="150" height="28" rx="6" fill="#0b7a75"/><text x="255" y="42" text-anchor="middle" fill="#fff">ISO/IEC 27001 ISMS</text>
+          <rect x="340" y="24" width="110" height="28" rx="6" fill="#0b7a75"/><text x="395" y="42" text-anchor="middle" fill="#fff">CISSP domains</text>
+          <rect x="460" y="24" width="100" height="28" rx="6" fill="#14263a"/><text x="510" y="42" text-anchor="middle" fill="#fff">ITIL / ITSM</text>
+          <rect x="570" y="24" width="120" height="28" rx="6" fill="none" stroke="#14263a" stroke-width="1.5"/><text x="630" y="42" text-anchor="middle">IEC 62443 (OT)</text>
+          <rect x="700" y="24" width="90" height="28" rx="6" fill="none" stroke="#14263a" stroke-width="1.5"/><text x="745" y="42" text-anchor="middle">NIST CSF</text>
+          <rect x="800" y="24" width="136" height="28" rx="6" fill="#14263a"/><text x="868" y="42" text-anchor="middle" fill="#fff">Budget &amp; Lieferanten</text>
+        </g>
+        <!-- identity & security -->
+        <g fill="#14263a" font-weight="600">
+          <rect x="180" y="74" width="130" height="28" rx="6" fill="#14263a"/><text x="245" y="92" text-anchor="middle" fill="#fff">Active Directory</text>
+          <rect x="320" y="74" width="130" height="28" rx="6" fill="#14263a"/><text x="385" y="92" text-anchor="middle" fill="#fff">Azure AD Connect</text>
+          <rect x="460" y="74" width="90" height="28" rx="6" fill="none" stroke="#14263a" stroke-width="1.5"/><text x="505" y="92" text-anchor="middle">Entra ID</text>
+          <rect x="560" y="74" width="90" height="28" rx="6" fill="#0b7a75"/><text x="605" y="92" text-anchor="middle" fill="#fff">IAM (SCP)</text>
+          <rect x="660" y="74" width="150" height="28" rx="6" fill="#14263a"/><text x="735" y="92" text-anchor="middle" fill="#fff">Endpoint &amp; malware</text>
+          <rect x="820" y="74" width="116" height="28" rx="6" fill="#14263a"/><text x="878" y="92" text-anchor="middle" fill="#fff">Backup &amp; DR</text>
+        </g>
+        <!-- cloud -->
+        <g fill="#14263a" font-weight="600">
+          <rect x="180" y="124" width="190" height="28" rx="6" fill="#0b7a75"/><text x="275" y="142" text-anchor="middle" fill="#fff">Samsung Cloud Platform</text>
+          <rect x="380" y="124" width="150" height="28" rx="6" fill="#0b7a75"/><text x="455" y="142" text-anchor="middle" fill="#fff">AWS (SA certified)</text>
+          <rect x="540" y="124" width="130" height="28" rx="6" fill="#0b7a75"/><text x="605" y="142" text-anchor="middle" fill="#fff">CloudFormation</text>
+          <rect x="680" y="124" width="100" height="28" rx="6" fill="none" stroke="#14263a" stroke-width="1.5"/><text x="730" y="142" text-anchor="middle">Terraform</text>
+          <rect x="790" y="124" width="146" height="28" rx="6" fill="none" stroke="#14263a" stroke-width="1.5"/><text x="863" y="142" text-anchor="middle">Azure (Schulung 2026)</text>
+        </g>
+        <!-- virtualization -->
+        <g fill="#14263a" font-weight="600">
+          <rect x="180" y="174" width="130" height="28" rx="6" fill="#14263a"/><text x="245" y="192" text-anchor="middle" fill="#fff">VMware vSphere</text>
+          <rect x="320" y="174" width="100" height="28" rx="6" fill="#14263a"/><text x="370" y="192" text-anchor="middle" fill="#fff">Hyper-V</text>
+          <rect x="430" y="174" width="140" height="28" rx="6" fill="#14263a"/><text x="500" y="192" text-anchor="middle" fill="#fff">Dell EMC VxRail</text>
+          <rect x="580" y="174" width="90" height="28" rx="6" fill="#14263a"/><text x="625" y="192" text-anchor="middle" fill="#fff">Veeam</text>
+          <rect x="680" y="174" width="110" height="28" rx="6" fill="#14263a"/><text x="735" y="192" text-anchor="middle" fill="#fff">Commvault</text>
+        </g>
+        <!-- os & data -->
+        <g fill="#14263a" font-weight="600">
+          <rect x="180" y="224" width="130" height="28" rx="6" fill="#14263a"/><text x="245" y="242" text-anchor="middle" fill="#fff">Linux (RHCSA)</text>
+          <rect x="320" y="224" width="130" height="28" rx="6" fill="#14263a"/><text x="385" y="242" text-anchor="middle" fill="#fff">Windows Server</text>
+          <rect x="460" y="224" width="90" height="28" rx="6" fill="#14263a"/><text x="505" y="242" text-anchor="middle" fill="#fff">MySQL</text>
+          <rect x="560" y="224" width="110" height="28" rx="6" fill="#14263a"/><text x="615" y="242" text-anchor="middle" fill="#fff">PostgreSQL</text>
+        </g>
+        <!-- network & ops -->
+        <g fill="#14263a" font-weight="600">
+          <rect x="180" y="274" width="150" height="28" rx="6" fill="#14263a"/><text x="255" y="292" text-anchor="middle" fill="#fff">Networking (CCNA)</text>
+          <rect x="340" y="274" width="110" height="28" rx="6" fill="#14263a"/><text x="395" y="292" text-anchor="middle" fill="#fff">DNS / DHCP</text>
+          <rect x="460" y="274" width="150" height="28" rx="6" fill="#14263a"/><text x="535" y="292" text-anchor="middle" fill="#fff">Zabbix + Grafana</text>
+          <rect x="620" y="274" width="170" height="28" rx="6" fill="#14263a"/><text x="705" y="292" text-anchor="middle" fill="#fff">RZ-Strom &amp; USV</text>
+        </g>
+        <!-- legend -->
+        <g transform="translate(180 318)" font-size="11.5" fill="#6b7d93">
+          <rect width="14" height="10" rx="2" fill="#0b7a75"/><text x="20" y="9">Cloud, produktiv</text>
+          <rect x="150" width="14" height="10" rx="2" fill="#14263a"/><text x="170" y="9">On-Premises, produktiv</text>
+          <rect x="320" width="14" height="10" rx="2" fill="none" stroke="#14263a"/><text x="340" y="9">Geschult / zertifiziert, nur Labor</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CREDENTIALS ================= -->
+<section class="block reveal" id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">node 04 / nachprüfbar</span>
+      <h2>Zertifikate, Sicherheit zuerst</h2>
+      <p>Jedes Zertifikat verlinkt auf die Prüfseite des Ausstellers, sofern vorhanden.</p>
+    </div>
+    <div class="certs">
+      <article class="cert key">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#d6ecea" stroke="#0b7a75" stroke-width="2"/><path d="M22 10l9 4v7c0 7-5 11-9 13-4-2-9-6-9-13v-7z" fill="#fff" stroke="#0b7a75" stroke-width="1.8"/><path d="M17 22l4 4 7-8" stroke="#0b7a75" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
+        <div><b>CISSP</b><small>ISC2, 2026</small><a href="https://www.credly.com/badges/bd2125ed-7eab-4bdd-82c4-76a13cde9cba/public_url" target="_blank" rel="noopener">Auf Credly prüfen</a></div>
+      </article>
+      <article class="cert key">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#d6ecea" stroke="#0b7a75" stroke-width="2"/><rect x="13" y="13" width="18" height="18" rx="3" fill="#fff" stroke="#0b7a75" stroke-width="1.8"/><path d="M17 22l3 3 7-7" stroke="#0b7a75" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
+        <div><b>ISO/IEC 27001 Lead Implementer</b><small>PECB, 2026</small><a href="https://www.credly.com/badges/27df6e22-a279-452b-bd6d-be46b10b2276/public_url" target="_blank" rel="noopener">Auf Credly prüfen</a></div>
+      </article>
+      <article class="cert">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#f2f5f8" stroke="#14263a" stroke-width="2"/><path d="M15 27a5 5 0 010-10 7 7 0 0113.5 1.8A4 4 0 0128 27z" fill="#fff" stroke="#14263a" stroke-width="1.8"/></svg>
+        <div><b>AWS Certified Solutions Architect</b><small>Amazon Web Services</small><a href="https://www.credly.com/badges/c79d98a2-d825-4f5d-99a4-6610579b8c74/public_url" target="_blank" rel="noopener">Auf Credly prüfen</a></div>
+      </article>
+      <article class="cert">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#f2f5f8" stroke="#14263a" stroke-width="2"/><rect x="12" y="14" width="20" height="16" rx="2" fill="#fff" stroke="#14263a" stroke-width="1.8"/><path d="M16 19l3 3-3 3M21 25h6" stroke="#14263a" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <div><b>RHCSA</b><small>Red Hat Certified System Administrator</small></div>
+      </article>
+      <article class="cert">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#f2f5f8" stroke="#14263a" stroke-width="2"/><rect x="13" y="15" width="8" height="6" rx="1" fill="#fff" stroke="#14263a" stroke-width="1.6"/><rect x="23" y="15" width="8" height="6" rx="1" fill="#fff" stroke="#14263a" stroke-width="1.6"/><rect x="13" y="23" width="8" height="6" rx="1" fill="#fff" stroke="#14263a" stroke-width="1.6"/><rect x="23" y="23" width="8" height="6" rx="1" fill="#fff" stroke="#14263a" stroke-width="1.6"/></svg>
+        <div><b>VCP5-DCV</b><small>VMware Certified Professional</small></div>
+      </article>
+      <article class="cert">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#f2f5f8" stroke="#14263a" stroke-width="2"/><circle cx="15" cy="22" r="3" fill="#fff" stroke="#14263a" stroke-width="1.6"/><circle cx="29" cy="22" r="3" fill="#fff" stroke="#14263a" stroke-width="1.6"/><circle cx="22" cy="14" r="3" fill="#fff" stroke="#14263a" stroke-width="1.6"/><path d="M18 22h8M17 20l3-4M27 20l-3-4" stroke="#14263a" stroke-width="1.6"/></svg>
+        <div><b>CCNA</b><small>Cisco</small></div>
+      </article>
+      <article class="cert">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#f2f5f8" stroke="#14263a" stroke-width="2"/><path d="M14 28l4-12 4 8 4-8 4 12" stroke="#14263a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <div><b>ITIL Foundation</b><small>Axelos</small></div>
+      </article>
+      <article class="cert">
+        <svg class="seal" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" fill="#f2f5f8" stroke="#14263a" stroke-width="2"/><path d="M22 12l8 3v6c0 6-4 9-8 11-4-2-8-5-8-11v-6z" fill="#fff" stroke="#14263a" stroke-width="1.8"/></svg>
+        <div><b>KCA Information Security Engineer (정보보안기사)</b><small>Korea Communications Agency, staatliche Qualifikation</small><a href="https://www.cq.or.kr/qh_cqcgm07_001.do" target="_blank" rel="noopener">Prüfen</a></div>
+      </article>
+    </div>
+    <div class="edu">
+      <span><b>MBA</b>, Pusan National University</span>
+      <span><b>B.Sc. Werkstofftechnik</b>, University of Ulsan</span>
+      <span><b>Kurse 2026:</b> Microsoft Azure inkl. Entra ID; IEC 62443 Industrial Cybersecurity; Grundlagen OT/ICS-Sicherheit</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="block reveal" id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">node 05 / Belege</span>
+      <h2>Arbeit, die Sie prüfen können</h2>
+      <p>Öffentliche Repositories und Beschreibungen. Das erste Projekt ist die Seite, die Sie gerade lesen.</p>
+    </div>
+    <div class="projects">
+      <article class="project">
+        <div class="fig draw">
+          <svg viewBox="0 0 480 190" role="img" aria-label="Architektur dieser Seite: GitHub Actions deployt per OIDC in einen privaten S3-Bucket hinter CloudFront mit ACM-Zertifikat, Security-Header-Policy und Route 53 DNS" font-family="Manrope, sans-serif" font-size="11.5">
+            <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3d5068"/></marker></defs>
+            <g fill="none" stroke="#3d5068" stroke-width="1.5" marker-end="url(#ar2)">
+              <path class="d" d="M104 60H146"/><path class="d" d="M246 60H288"/><path class="d" d="M388 60H410"/>
+              <path class="d" d="M196 84V110"/>
+            </g>
+            <!-- github -->
+            <rect x="16" y="38" width="88" height="44" rx="7" fill="#fff" stroke="#14263a" stroke-width="1.5"/><text x="60" y="56" text-anchor="middle" font-weight="700" fill="#14263a">GitHub</text><text x="60" y="72" text-anchor="middle" fill="#6b7d93">Actions, OIDC</text>
+            <!-- s3 -->
+            <rect x="146" y="38" width="100" height="44" rx="7" fill="#fff" stroke="#14263a" stroke-width="1.5"/><text x="196" y="56" text-anchor="middle" font-weight="700" fill="#14263a">S3 bucket</text><text x="196" y="72" text-anchor="middle" fill="#6b7d93">privat, OAC</text>
+            <!-- cloudfront -->
+            <rect x="288" y="38" width="100" height="44" rx="7" fill="#d6ecea" stroke="#0b7a75" stroke-width="2"/><text x="338" y="56" text-anchor="middle" font-weight="700" fill="#0b7a75">CloudFront</text><text x="338" y="72" text-anchor="middle" fill="#3d5068">TLS 1.2+, headers</text>
+            <!-- visitor -->
+            <circle cx="438" cy="60" r="20" fill="#fff" stroke="#14263a" stroke-width="1.5"/><text x="438" y="64" text-anchor="middle" font-weight="700" fill="#14263a">Sie</text>
+            <!-- terraform -->
+            <rect x="146" y="110" width="100" height="40" rx="7" fill="#fff" stroke="#b5672a" stroke-width="1.5" stroke-dasharray="4 3"/><text x="196" y="127" text-anchor="middle" font-weight="700" fill="#b5672a">Terraform</text><text x="196" y="142" text-anchor="middle" fill="#6b7d93">alles oben</text>
+            <!-- acm / route53 -->
+            <g fill="#6b7d93" font-family="JetBrains Mono, monospace" font-size="10.5"><text x="288" y="108">ACM-Zertifikat</text><text x="288" y="124">Route 53 DNS</text><text x="288" y="140">HSTS, CSP, A+</text></g>
+            <text x="16" y="176" fill="#6b7d93">eu-central-1 (Frankfurt), unter 1 EUR im Monat</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="status">live</span>
+          <h3>Diese Seite, als Code</h3>
+          <p>Eine statische Seite auf S3 und CloudFront, mit Terraform bereitgestellt und per GitHub Actions über OIDC deployt, also ohne langlebige Schlüssel. Security-Header und TLS am Edge konfiguriert.</p>
+          <div class="links"><a href="https://github.com/" target="_blank" rel="noopener">Repository</a><a href="#stack">Stack</a></div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="fig draw">
+          <svg viewBox="0 0 480 190" role="img" aria-label="Geplante AWS Secure Landing Zone: Organisation mit Security-, Log-Archiv- und Workload-Konten; GuardDuty, Security Hub, CloudTrail und Config melden an ein zentrales Security-Konto" font-family="Manrope, sans-serif" font-size="11.5">
+            <defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3d5068"/></marker></defs>
+            <rect x="16" y="20" width="448" height="150" rx="10" fill="none" stroke="#14263a" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="28" y="38" font-weight="700" fill="#14263a">AWS Organization</text><text x="140" y="38" fill="#6b7d93">SCPs, IAM Identity Center</text>
+            <rect x="28" y="54" width="110" height="52" rx="7" fill="#fff" stroke="#14263a" stroke-width="1.5"/><text x="83" y="74" text-anchor="middle" font-weight="700" fill="#14263a">Workload</text><text x="83" y="90" text-anchor="middle" fill="#6b7d93">dev / prod</text>
+            <rect x="150" y="54" width="110" height="52" rx="7" fill="#fff" stroke="#14263a" stroke-width="1.5"/><text x="205" y="74" text-anchor="middle" font-weight="700" fill="#14263a">Log-Archiv</text><text x="205" y="90" text-anchor="middle" fill="#6b7d93">CloudTrail, Config</text>
+            <rect x="300" y="54" width="150" height="52" rx="7" fill="#d6ecea" stroke="#0b7a75" stroke-width="2"/><text x="375" y="74" text-anchor="middle" font-weight="700" fill="#0b7a75">Security</text><text x="375" y="90" text-anchor="middle" fill="#3d5068">GuardDuty, Security Hub</text>
+            <g fill="none" stroke="#3d5068" stroke-width="1.5" marker-end="url(#ar3)"><path class="d" d="M138 80H150"/><path class="d" d="M260 80H300"/><path class="d" d="M83 106V124H375V106"/></g>
+            <text x="234" y="140" text-anchor="middle" fill="#6b7d93">Findings und Alarme laufen an einer Stelle zusammen</text>
+            <text x="28" y="160" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#b5672a">terraform apply, in Arbeit</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="status plan">in Arbeit</span>
+          <h3>AWS Secure Landing Zone</h3>
+          <p>Eine Multi-Account-Basis in Terraform: Organisation und Service Control Policies, zentrales Logging, GuardDuty und Security Hub, dazu ein kurzes Runbook zur Triage von Findings. Aufgebaut, wie ich es für ein mittelständisches Unternehmen einrichten würde.</p>
+          <div class="links"><a href="https://github.com/" target="_blank" rel="noopener">Repository</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= CONTACT ================= -->
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <span class="mono" style="color:#8fd0cb">node 06 / Kontakt</span>
+      <h2 style="margin-top:10px">Startbereit. Sprechen wir.</h2>
+      <p>Wohnhaft bei Frankfurt, mit Blauer Karte EU, sofort verfügbar für Rollen in Cloud, Security oder hybrider Infrastruktur in ganz Deutschland. Remote oder vor Ort.</p>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:ilhyun1004@gmail.com">E-Mail schreiben</a>
+        <a class="btn" href="../Ilhyun-Lee-CV-DE.pdf" download>Lebenslauf (PDF)</a>
+      </div>
+    </div>
+    <ul class="chan">
+      <li><span>e-mail</span><a href="mailto:ilhyun1004@gmail.com">ilhyun1004@gmail.com</a></li>
+      <li><span>linkedin</span><a href="https://www.linkedin.com/in/ilhyun-lee-860aa9a2" target="_blank" rel="noopener">linkedin.com/in/ilhyun-lee-860aa9a2</a></li>
+      <li><span>github</span><a href="https://github.com/" target="_blank" rel="noopener">github.com/ilhyunlee</a></li>
+      <li><span>wohnort</span><span style="color:#fff">Bad Soden am Taunus, Hessen</span></li>
+      <li><span>sprachen</span><span style="color:#fff">Koreanisch (Muttersprache), Englisch fließend, Deutsch A1 (im Kurs)</span></li>
+    </ul>
+    <div class="foot" style="grid-column:1/-1">
+      <span>Ilhyun Lee. Stand: Oktober 2026.</span>
+      <span><a href="../impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="../datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // section reveal + svg draw-in (one entrance per section)
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .draw').forEach(el => io.observe(el));
+
+  // nav active state + left trace
+  const ids = ['top', 'skills', 'experience', 'stack', 'credentials', 'projects', 'contact'];
+  const labels = { top: 'hero', skills: 'skills', experience: 'experience', stack: 'stack', credentials: 'credentials', projects: 'projects', contact: 'contact' };
+  const trace = document.querySelector('.trace');
+  const fill = document.getElementById('traceFill');
+  const nodes = {};
+  ids.forEach(id => {
+    const n = document.createElement('div'); n.className = 'node';
+    n.innerHTML = '<span>' + labels[id] + '</span>'; trace.appendChild(n); nodes[id] = n;
+  });
+  const navLinks = [...document.querySelectorAll('.nav-links a')];
+  function layout() {
+    const h = window.innerHeight, docH = document.documentElement.scrollHeight;
+    ids.forEach(id => {
+      const el = document.getElementById(id); if (!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY;
+      nodes[id].style.top = Math.min(h - 20, Math.max(8, (y / docH) * (h - 16))) + 'px';
+    });
+  }
+  function onScroll() {
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    const p = docH > 0 ? window.scrollY / docH : 0;
+    fill.style.height = (p * 100) + '%';
+    let cur = 'top';
+    ids.forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < window.innerHeight * 0.4) cur = id; });
+    ids.forEach(id => nodes[id].classList.toggle('on', id === cur));
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  }
+  layout(); onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => { layout(); onScroll(); });
+
+  // count-up on stats (once)
+  if (!reduce) {
+    const so = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return; so.unobserve(e.target);
+      e.target.querySelectorAll('[data-count]').forEach(b => {
+        const end = +b.dataset.count, t0 = performance.now();
+        const step = now => { const k = Math.min(1, (now - t0) / 900), v = Math.round(end * (1 - Math.pow(1 - k, 3)));
+          b.textContent = v.toLocaleString('de-DE'); if (k < 1) requestAnimationFrame(step); };
+        requestAnimationFrame(step);
+      });
+    }), { threshold: 0.5 });
+    so.observe(document.querySelector('.stats'));
+  }
+})();
+</script>
+</body>
+</html>
