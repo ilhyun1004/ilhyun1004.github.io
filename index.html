@@ -61,7 +61,7 @@
   .nav-links a { color: var(--ink-2); }
   .nav-links a.active { color: var(--teal); }
   .nav .spacer { flex: 1; }
-  .lang { display: flex; gap: 6px; font-size: 13.5px; font-weight: 700; font-family: var(--mono); margin-right: 6px; }
+  .lang { display: flex; gap: 6px; font-size: 13.5px; font-weight: 700; font-family: var(--mono); }
   .lang a { color: var(--ink-3); } .lang a[aria-current] { color: var(--teal); } .lang span { color: var(--line); }
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 15px; border: 1.5px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; }
   .btn:hover { text-decoration: none; background: var(--white); }
@@ -212,7 +212,6 @@
     </nav>
     <span class="spacer"></span>
     <nav class="lang" aria-label="Language"><a href="./" aria-current="page">EN</a><span>|</span><a href="de/" lang="de">DE</a></nav>
-    <a class="btn small primary" href="Ilhyun-Lee-CV-EN.pdf" download>Download CV</a>
   </div>
 </header>
 
@@ -353,44 +352,41 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="mono">node 02 / where it was built</span>
-      <h2>Twenty-nine years, drawn to scale</h2>
+      <h2>Over 20 years, drawn to scale</h2>
       <p>Each bar is a role; the colour is what the work was mostly about. The move into cloud security is the natural end of the line, not a career change.</p>
     </div>
     <div class="timeline draw">
-      <svg viewBox="-40 0 1000 300" role="img" aria-label="Timeline 1997 to 2026: IT administrator at K2 Sports, IT management at Sea Life Busan, corporate IT manager at NOV, senior IT consultant at DIVA Korea, senior system administrator at Samsung SDS Germany, then CISSP and ISO 27001 Lead Implementer in 2026" font-family="Manrope, sans-serif">
-        <!-- scale: 1997..2027 → x 110..930 ; 1 year = 27.33px -->
+      <svg viewBox="-40 0 1000 260" role="img" aria-label="Timeline 2001 to 2026: IT management at Sea Life Busan, corporate IT manager at NOV, senior IT consultant at DIVA Korea, senior system administrator at Samsung SDS Germany, then CISSP and ISO 27001 Lead Implementer in 2026" font-family="Manrope, sans-serif">
+        <!-- scale: 2001..2027 → x 110..930 ; 1 year = 31.54px -->
         <g font-family="JetBrains Mono, monospace" font-size="11.5" fill="#6b7d93">
-          <g stroke="#dbe3ec"><line x1="110" x2="110" y1="24" y2="236"/><line x1="192" x2="192" y1="24" y2="236"/><line x1="274" x2="274" y1="24" y2="236"/><line x1="356" x2="356" y1="24" y2="236"/><line x1="438" x2="438" y1="24" y2="236"/><line x1="520" x2="520" y1="24" y2="236"/><line x1="602" x2="602" y1="24" y2="236"/><line x1="684" x2="684" y1="24" y2="236"/><line x1="766" x2="766" y1="24" y2="236"/><line x1="848" x2="848" y1="24" y2="236"/><line x1="930" x2="930" y1="24" y2="236"/></g>
-          <text x="110" y="16" text-anchor="middle">1997</text><text x="192" y="16" text-anchor="middle">2000</text><text x="274" y="16" text-anchor="middle">2003</text><text x="356" y="16" text-anchor="middle">2006</text><text x="438" y="16" text-anchor="middle">2009</text><text x="520" y="16" text-anchor="middle">2012</text><text x="602" y="16" text-anchor="middle">2015</text><text x="684" y="16" text-anchor="middle">2018</text><text x="766" y="16" text-anchor="middle">2021</text><text x="848" y="16" text-anchor="middle">2024</text><text x="930" y="16" text-anchor="middle">2027</text>
+          <g stroke="#dbe3ec"><line x1="110" x2="110" y1="24" y2="196"/><line x1="204.6" x2="204.6" y1="24" y2="196"/><line x1="299.2" x2="299.2" y1="24" y2="196"/><line x1="393.8" x2="393.8" y1="24" y2="196"/><line x1="488.5" x2="488.5" y1="24" y2="196"/><line x1="583.1" x2="583.1" y1="24" y2="196"/><line x1="677.7" x2="677.7" y1="24" y2="196"/><line x1="772.3" x2="772.3" y1="24" y2="196"/><line x1="866.9" x2="866.9" y1="24" y2="196"/></g>
+          <text x="110" y="16" text-anchor="middle">2001</text><text x="204.6" y="16" text-anchor="middle">2004</text><text x="299.2" y="16" text-anchor="middle">2007</text><text x="393.8" y="16" text-anchor="middle">2010</text><text x="488.5" y="16" text-anchor="middle">2013</text><text x="583.1" y="16" text-anchor="middle">2016</text><text x="677.7" y="16" text-anchor="middle">2019</text><text x="772.3" y="16" text-anchor="middle">2022</text><text x="866.9" y="16" text-anchor="middle">2025</text>
         </g>
         <!-- rows -->
         <g font-size="12.5" fill="#14263a">
-          <text x="100" y="52" text-anchor="end" font-weight="600">K2 Sports</text>
-          <rect x="110" y="40" width="110" height="18" rx="4" fill="#3d5068"/>
-          <text x="226" y="53" font-size="11.5" fill="#6b7d93">IT Administrator: network, file and mail servers</text>
 
-          <text x="100" y="92" text-anchor="end" font-weight="600">Sea Life Busan</text>
-          <rect x="220" y="80" width="246" height="18" rx="4" fill="#3d5068"/>
-          <text x="472" y="93" font-size="11.5" fill="#6b7d93">IT Manager, Merlin Entertainments</text>
+          <text x="100" y="52" text-anchor="end" font-weight="600">Sea Life Busan</text>
+          <rect x="110" y="40" width="283.8" height="18" rx="4" fill="#3d5068"/>
+          <text x="399.8" y="53" font-size="11.5" fill="#6b7d93">IT Manager, Merlin Entertainments</text>
 
-          <text x="100" y="132" text-anchor="end" font-weight="600">NOV</text>
-          <rect x="466" y="120" width="246" height="18" rx="4" fill="#14263a"/>
-          <text x="718" y="133" font-size="11.5" fill="#6b7d93">Corporate IT Manager, 7 staff</text>
+          <text x="100" y="92" text-anchor="end" font-weight="600">NOV</text>
+          <rect x="393.8" y="80" width="283.8" height="18" rx="4" fill="#14263a"/>
+          <text x="683.7" y="93" font-size="11.5" fill="#6b7d93">Corporate IT Manager, 7 staff</text>
 
-          <text x="100" y="172" text-anchor="end" font-weight="600">DIVA Korea</text>
-          <rect x="712" y="160" width="109" height="18" rx="4" fill="#3d5068"/>
-          <text x="827" y="173" font-size="11.5" fill="#6b7d93">Senior IT Consultant</text>
+          <text x="100" y="132" text-anchor="end" font-weight="600">DIVA Korea</text>
+          <rect x="677.7" y="120" width="126.2" height="18" rx="4" fill="#3d5068"/>
+          <text x="809.8" y="133" font-size="11.5" fill="#6b7d93">Senior IT Consultant</text>
 
-          <text x="100" y="212" text-anchor="end" font-weight="600">Samsung SDS DE</text>
-          <rect x="821" y="200" width="87" height="18" rx="4" fill="#0b7a75"/>
-          <text x="914" y="213" font-size="11.5" fill="#6b7d93">Hosting</text>
+          <text x="100" y="172" text-anchor="end" font-weight="600">Samsung SDS DE</text>
+          <rect x="803.8" y="160" width="100" height="18" rx="4" fill="#0b7a75"/>
+          <text x="909.8" y="173" font-size="11.5" fill="#6b7d93">Hosting</text>
         </g>
         <!-- 2026 milestone -->
-        <line class="d" x1="903" x2="903" y1="24" y2="250" stroke="#0b7a75" stroke-width="1.5" stroke-dasharray="4 4"/>
-        <path d="M903 232l8 8-8 8-8-8z" fill="#0b7a75"/>
-        <text x="895" y="268" text-anchor="end" font-size="12" font-weight="700" fill="#0b7a75">2026: CISSP + ISO 27001 LI</text>
+        <line class="d" x1="898.5" x2="898.5" y1="24" y2="210" stroke="#0b7a75" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <path d="M898.5 192l8 8-8 8-8-8z" fill="#0b7a75"/>
+        <text x="890.5" y="228" text-anchor="end" font-size="12" font-weight="700" fill="#0b7a75">2026: CISSP + ISO 27001 LI</text>
         <!-- legend -->
-        <g font-size="11.5" fill="#6b7d93" transform="translate(110 290)">
+        <g font-size="11.5" fill="#6b7d93" transform="translate(110 250)">
           <rect width="12" height="10" rx="2" fill="#3d5068"/><text x="18" y="9">IT operations</text>
           <rect x="110" width="12" height="10" rx="2" fill="#14263a"/><text x="128" y="9">IT leadership</text>
           <rect x="210" width="12" height="10" rx="2" fill="#0b7a75"/><text x="228" y="9">Cloud hosting</text>
@@ -454,7 +450,7 @@
       <svg viewBox="0 0 960 330" role="img" aria-label="Technology stack by layer: governance, identity and security, cloud platforms, virtualization and backup, operating systems and databases, networks and monitoring; most are production experience, Azure and Terraform are trained" font-family="Manrope, sans-serif" font-size="12.5">
         <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#9fb0c2" stroke-width="1.2"/></pattern></defs>
         <g fill="#6b7d93" font-family="JetBrains Mono, monospace" font-size="11.5">
-          <text x="24" y="42">governance</text><text x="24" y="92">identity &amp; security</text><text x="24" y="142">cloud</text><text x="24" y="192">virtualization</text><text x="24" y="242">os &amp; data</text><text x="24" y="292">network &amp; ops</text>
+          <text x="24" y="42">governance</text><text x="24" y="52">identity &amp; security</text><text x="24" y="142">cloud</text><text x="24" y="192">virtualization</text><text x="24" y="242">os &amp; data</text><text x="24" y="292">network &amp; ops</text>
         </g>
         <g stroke="#dbe3ec"><line x1="180" x2="936" y1="62" y2="62"/><line x1="180" x2="936" y1="112" y2="112"/><line x1="180" x2="936" y1="162" y2="162"/><line x1="180" x2="936" y1="212" y2="212"/><line x1="180" x2="936" y1="262" y2="262"/></g>
 
@@ -469,12 +465,12 @@
         </g>
         <!-- identity & security -->
         <g fill="#14263a" font-weight="600">
-          <rect x="180" y="74" width="130" height="28" rx="6" fill="#14263a"/><text x="245" y="92" text-anchor="middle" fill="#fff">Active Directory</text>
-          <rect x="320" y="74" width="130" height="28" rx="6" fill="#14263a"/><text x="385" y="92" text-anchor="middle" fill="#fff">Azure AD Connect</text>
-          <rect x="460" y="74" width="90" height="28" rx="6" fill="none" stroke="#14263a" stroke-width="1.5"/><text x="505" y="92" text-anchor="middle">Entra ID</text>
-          <rect x="560" y="74" width="90" height="28" rx="6" fill="#0b7a75"/><text x="605" y="92" text-anchor="middle" fill="#fff">IAM (SCP)</text>
-          <rect x="660" y="74" width="150" height="28" rx="6" fill="#14263a"/><text x="735" y="92" text-anchor="middle" fill="#fff">Endpoint &amp; malware</text>
-          <rect x="820" y="74" width="116" height="28" rx="6" fill="#14263a"/><text x="878" y="92" text-anchor="middle" fill="#fff">Backup &amp; DR</text>
+          <rect x="180" y="74" width="130" height="28" rx="6" fill="#14263a"/><text x="245" y="52" text-anchor="middle" fill="#fff">Active Directory</text>
+          <rect x="320" y="74" width="130" height="28" rx="6" fill="#14263a"/><text x="385" y="52" text-anchor="middle" fill="#fff">Azure AD Connect</text>
+          <rect x="460" y="74" width="90" height="28" rx="6" fill="none" stroke="#14263a" stroke-width="1.5"/><text x="505" y="52" text-anchor="middle">Entra ID</text>
+          <rect x="560" y="74" width="90" height="28" rx="6" fill="#0b7a75"/><text x="605" y="52" text-anchor="middle" fill="#fff">IAM (SCP)</text>
+          <rect x="660" y="74" width="150" height="28" rx="6" fill="#14263a"/><text x="735" y="52" text-anchor="middle" fill="#fff">Endpoint &amp; malware</text>
+          <rect x="820" y="74" width="116" height="28" rx="6" fill="#14263a"/><text x="878" y="52" text-anchor="middle" fill="#fff">Backup &amp; DR</text>
         </g>
         <!-- cloud -->
         <g fill="#14263a" font-weight="600">
@@ -617,7 +613,7 @@
             <rect x="300" y="54" width="150" height="52" rx="7" fill="#d6ecea" stroke="#0b7a75" stroke-width="2"/><text x="375" y="74" text-anchor="middle" font-weight="700" fill="#0b7a75">Security</text><text x="375" y="90" text-anchor="middle" fill="#3d5068">GuardDuty, Security Hub</text>
             <g fill="none" stroke="#3d5068" stroke-width="1.5" marker-end="url(#ar3)"><path class="d" d="M138 80H150"/><path class="d" d="M260 80H300"/><path class="d" d="M83 106V124H375V106"/></g>
             <text x="234" y="140" text-anchor="middle" fill="#6b7d93">findings and alerts flow to one place</text>
-            <text x="28" y="160" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#b5672a">terraform apply, in progress</text>
+            <text x="28" y="120" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#b5672a">terraform apply, in progress</text>
           </svg>
         </div>
         <div class="body">
